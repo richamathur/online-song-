@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Song Mood</title>
+    <script type="text/javascript" src="js/pace.min.js">    
+    </script>
+    <link rel="stylesheet" type="text/css" href="pace.css">
+    <link rel="shortcut icon" type="image/x-icon" href="Img/f-icon.ico" alt="F">
+    <link rel="stylesheet" type="text/css" href="font-awesome.css"> 
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css">
+	<link rel="stylesheet" type="text/css" href="main.css">
+	<link href="https://fonts.googleapis.com/css?family=Audiowide&effect=shadow-multiple" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Jura|Boogaloo|Courgette|Aldrich|Fresca" rel="stylesheet">
+    <!-- saare required fonts ko ek hi api call se bula liya -->
+</head>
+<body>
+	<div class="wrapper ">
+		<section class="cover">
+            <!-- font-effect-shadow-multiple title ke effect k liye lagaya h -->
+            <!-- takes the required effect from google font api -->
+				<h1 class="font-effect-shadow-multiple">Song Mood</h1><span class="brand-ext">all time favourite</span>
+				<h2> Enter name to access your account </h2><div>
+                <div>
+                    <input type="text" placeholder="Name" id="name-input" class="name-inp">
+                    <button type="submit" id="go-button"> Go </button>
+                </div>
+                <!-- <div id="form">
+                <input type="text" placeholder="test@acadview.com" id="name-input">
+                <input type="password" placeholder="JavascriptRocks" id="password-input">
+                <button type="submit" id="go-button"> Go </button>
+                </div> -->
+		</section>
+			<div class="main hidden">
+		        <header class="header1 "> 
+    		        <div class="left floated brand"><h1>Song Mood</h1><span class="brand-ext">all time favourite</span></div>
+    		        <div class="right floated user-name"></div> 
+                </header>
+
+                <div class="top-content">
+                <!-- hamara Navbar jaisa menu-->
+                <ul class="option-list">
+                    <li id="see-home">Home</li>
+                    <li id="see-playlist">Playlist</li>
+                    <li id="see-moodlist">Mood list</li>
+                   
+                    </ul>
+                </div>
+		        <section class="content">
+		        <audio src="song1.mp3"></audio>
+                
+                <!--Mood-list building starts-->
+                <div class="hidden" id="mood-list">
+                    <ul class="img-list">
+                        
+                        <li><div class="mood mood1"><span>Happy</span></div></li>
+
+                        <li><div class="mood mood2"><span>Sad</span></div></li>
+
+                        <li><div class="mood mood3"><span>Romantic</span></div></li>
+
+                        <li><div class="mood mood4"><span>RoadTrip Mix</span></div></li>
+
+                        <li><div class="mood mood5"><span>Pop</span></div></li>
+
+                        <li><div class="mood mood6"><span>Casual</span></div></li>
+
+                        <li><div class="mood mood7"><span>Retro World</span></div></li>
+
+                        <li><div class="mood mood8"><span>Instrumental</span></div></li>
+                    </ul>
+                </div>
+                <!--Mood-list building ends-->
+                <table id="songs" class="">
+                <thead class="list-headers">
+                <tr>
+                    <td class="number"> Title </td> 
+                    <td> Artist </td>
+                    <td> Album </td>
+                    <td> Duration </td>
+                </tr>
+                </thead>
+                <tbody>
+                    <tr class="song" id="song1">
+                        <td class="song-name"></td>
+                        <td class="song-artist"></td>
+                        <td class="song-album"></td>
+                        <td class="song-length"></td>
+                    </tr>                    
+                    <tr class="song" id="song2">
+                        <td class="song-name"></td>
+                        <td class="song-artist"></td>
+                        <td class="song-album"></td>
+                        <td class="song-length"></td>
+                    </tr>
+                    <tr class="song" id="song3">
+                        <td class="song-name"></td>
+                        <td class="song-artist"></td>
+                        <td class="song-album"></td>
+                        <td class="song-length"></td>
+                    </tr>
+                    <tr class="song" id="song4">
+                        <td class="song-name"></td>
+                        <td class="song-artist"></td>
+                        <td class="song-album"></td>
+                        <td class="song-length"></td>
+                    </tr>
+                </tbody>
+                </table>
+                
+		        </section>
+		        <footer class="footer">
+                <div class="current-song-wrapper">
+                    <img class="current-song-image">
+                    <div>
+                        <p class="current-song-name"></p>
+                        <p class="current-song-album"></p>
+                    </div>
+                </div>
+                <div class="interactive-pane">
+                <div class="controls">
+                    <div class="player-buttons">
+                        <i class="fa fa-repeat clickable backward-icon inactive" title="Repeat" aria-hidden="true"></i>
+                        <i class="fa fa-step-backward clickable backward-icon" title="Previous" aria-hidden="true"></i>
+                        <i class="fa fa-play clickable play-icon" aria-hidden="true"></i>
+                        <i class="fa fa-step-forward clickable backward-icon" title="Next" aria-hidden="true"></i>
+                        <i class="fa fa-random clickable backward-icon inactive" title="Shuffle" aria-hidden="true"></i>
+                    </div>
+                </div>
+                <div class="progress-wrapper">
+                        <span class="time-elapsed"> </span>
+                        <div class="player-progress">
+                            <div class="progress-filled"></div>
+                        </div>
+                        <span class="song-duration"></span>
+                </div>
+                </div>
+
+                <div class="responsive-pane">
+                    <i class="fa fa-volume-up" aria-hidden="true"></i>
+                    <span>&nbsp;</span>
+                   <input id="vol-control" type="range" min="0" max="100" step="1">
+                </div>
+            </footer>
+		        </div>
+	</div>
+	<script src="js/jquery.js"></script>
+    <script src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js">
+    </script>
+    <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

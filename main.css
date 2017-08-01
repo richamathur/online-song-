@@ -1,0 +1,530 @@
+html,body{
+	height: 100%;
+    width: 100%;
+    border: 0;
+    margin: 0;
+    font-family: 'Jura', sans-serif;
+    background-color: #1f1f1f;
+}
+.wrapper{
+	height: 100%;
+    width: 100%;
+	background-color: #282828;
+}
+
+.cover{
+	height: 90%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.cover h1{
+	color: orange;
+	font-size: 55px;
+	font-family: 'Audiowide', cursive;
+	margin: 0px;
+	margin-bottom: 2px;
+}
+.cover h2{
+    color: grey;
+}
+#form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.brand-ext{
+	color: white;
+	font-weight: bold;
+}
+#name-input{
+    height: 35px;
+    width: 250px;
+    border-radius: 10px;
+    padding-left: 8px;
+    font-size: 16px;
+}
+.name-inp{
+    border:2px solid orange;
+}
+#name-input:focus{
+	outline:none;
+}
+/*#password-input{
+    height: 35px;
+    width: 250px;
+    border-radius: 10px;
+    padding-left: 8px;
+    border:1px solid orange;
+    font-size: 16px;
+    margin-top: 10px;
+}
+#password-input:focus{
+    outline:none;
+}*/
+#go-button{
+    padding: 5px;
+    height: 35px;
+    width: 75px;
+    border-radius: 10px;
+    background-color: orange;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    border:1px solid white;
+    outline-width: 1px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+.main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    color: white; 
+    background-color: #1f1f1f;
+    background-image: url(back.gif);
+    background-position: center;
+	background-size: cover;
+	
+}
+
+.main .header1 {
+    height: 60px;
+    background-color: #282828;
+    padding: 1rem;
+    color: #FFF;
+}
+
+.main .content {
+    flex:1;
+    /*background-color: #1f1f1f;*/
+}
+.main input[type=search]{
+   border-radius: 5px;
+   border-color: black;
+   padding-left: 10px;
+   margin-top: 30px;
+}
+.main input[type=search]:focus{
+    outline: none;
+}
+
+.main footer {
+    border-top:1px solid white;
+    height: 80px;
+    background-color: #282828;
+    padding-top: 1rem;
+}
+header .brand h1{
+	color: orange;
+	font-size: 35px;
+	font-family: 'Audiowide', cursive;
+	margin: 0px;
+}
+.player-buttons {
+    display:flex;
+    font-size: 1.5rem;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+.hidden {
+    display: none;
+}
+.left.floated {
+    float: left;
+}
+.right.floated {
+    float: right;
+    font-size: 1.2rem;
+}
+
+.clickable {
+    cursor: pointer;
+}
+.error {
+    border: 2px solid red;
+    outline-color: red;
+}
+.play-icon{
+	color: white;
+    margin:0px 30px;
+}
+.forward-icon{
+    font-size: 20px;
+    vertical-align: middle;
+    margin:0px 30px;
+}
+.backward-icon{
+    font-size: 20px;
+    vertical-align: middle;
+    margin:0px 30px;
+}
+.inactive{
+    color: #aaa;
+}
+.progress-wrapper {
+    margin-top: 0.3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.progress-wrapper span {
+    color: #959595;
+}
+
+.player-progress {
+    height: 3px;
+    width: 650px;
+    background-color: #3d3d3d;
+    border-radius: 4px;
+    margin-right: 6px;
+    margin-left: 6px;
+    cursor: pointer;
+}
+.player-progress:hover{
+    height:8px;
+}
+.progress-filled {
+    background-color: orange;
+    height:inherit;
+    border-radius: 4px;
+    width: 0;
+}
+.main .content {
+    width:850px;
+    margin: 0px auto;
+}
+
+.list-headers {
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid rgba(255,255,255,0.5);
+}
+
+.list-headers > div {
+    width: 150px;
+    display: inline-block;
+}
+
+.list-headers > div:first-child {
+    width: 330px;
+}
+
+.list-headers > div:last-child {
+    text-align: right;
+}
+
+.song {
+    padding-top: 0.5rem;
+    min-height: 30px;
+    cursor: pointer;
+}
+
+.song > td{
+    width: 360px;
+}
+.song > td:last-child{
+    width: 150px;
+}
+
+.song .song-duration {
+    text-align: right;
+}
+
+.song-length {
+    text-align: right;
+}
+.current-song-wrapper {
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 10px;
+    margin-left: 40px;
+    display: flex;
+}
+
+.current-song-image {
+    height: 70px;
+    width: 70px;
+    margin-right: 1rem;
+}
+
+.current-song-name {
+    font-size: 1.3rem;
+    margin-top: 2px;
+    margin-bottom: 0;
+}
+.current-song-wrapper p{
+    margin:0px;
+}
+
+.current-song-album {
+    margin-top: 0.4rem;
+}
+
+table{
+    width:800px;
+    margin: 0px;
+    background-color: #1f1f1f;
+}
+
+/*DataTables overrides*/
+table.dataTable tbody tr {
+    background-color: initial;
+    cursor: pointer;   
+}
+table.dataTable tbody tr:hover{
+    background-color: #282828;
+}
+#songs_info {
+    display: none;
+}
+
+#songs_filter {
+    color: transparent;
+}
+#songs_filter input {
+    width: 400px;
+    margin-bottom: 1rem;
+    font-size: 16px;
+}
+/*volume ka location setting*/
+.responsive-pane{
+    position: absolute;
+    right: 0;
+    bottom:0;
+    margin-right: 50px;
+    margin-bottom: 20px;
+    display: flex;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+input[type=range]{
+    cursor: pointer;
+}
+.fa-volume-up{
+    color: orange;
+}
+.fa-volume-down{
+    color: orange;
+}
+.fa-volume-off{
+    color: orange;
+}
+.responsive-pane span{
+    font-size: 1rem;
+    font-weight: normal;
+}
+/*css for navbar kind*/
+.top-content{
+    width:950px;
+    margin:0px auto;
+    background-color: grey;
+    z-index: 10;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+}
+.top-content ul{
+    margin:0px;
+    padding-top:10px;
+    padding-bottom: 10px;
+}
+.option-list li{
+    display: inline-block;
+    margin: 0px 50px;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+}
+.option-list li:hover{
+    border-bottom: 2px solid orange;
+}
+
+.header2{
+    height: 60px;
+    background-color: none;
+    padding: 1rem;
+    color: #FFF;
+}
+/*css for mood lists*/
+#mood-list{
+    width: 700px;
+    height:324px;
+    margin:2rem auto;
+    margin-top: 40px;
+}
+#mood-list li{
+    display: inline-block;
+    padding:3px;
+}
+.mood{
+    opacity:.8;
+    cursor: pointer;
+    width: 150px;
+    height:150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    border:1px solid white;
+}
+.mood span{
+     margin: 0px auto;
+     font-weight: bold;
+     font-size: 1.2rem;
+}
+.mood:hover{
+    opacity: 1;
+}
+.mood1{
+    background-image: url(Img/happy.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.mood2{
+    background-image: url(Img/song4.jpg);
+    background-position: center;
+}
+.mood3{
+    background-image: url(Img/romantic.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.mood4{
+    background-image: url(Img/roadtrip.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.mood5{
+    background-image: url(Img/pop.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.mood6{
+    background-image: url(Img/jazz.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.mood7{
+    background-image: url(Img/retro.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.mood8{
+    background-image: url(Img/instrumental.jpg);
+    background-position: center;
+    background-size: cover;
+}
+/*Additional classes jo js se add krte h*/
+.main1{
+background-image: url(Img/loop.gif);
+background-position: center;
+background-size: cover;
+}.main2{
+background-image: url(Img/staystrong.jpg);
+background-position: center;
+background-size: cover;
+font-family: 'Boogaloo', cursive;
+}.main3{
+background-image: url(Img/romantic1.gif);
+background-position: center;
+background-size: cover;
+font-family: 'Courgette', cursive;
+font-weight: normal;
+}.main4{
+background-image: url(Img/roadtrip1.jpg);
+background-position: center;
+background-size: cover;
+font-family: 'Fresca', sans-serif;
+}
+.main5{
+background-image: url(Img/pop1.jpg);
+background-position: center;
+background-size: cover;
+}.main6{
+background-image: url(Img/jazz.jpg);
+background-position: center;
+background-size: cover;
+}.main7{
+background-image: url(Img/retro.jpg);
+background-position: center;
+background-size: cover;
+font-family: 'Aldrich', sans-serif;
+}.main8{
+background-image: url(Img/edm2.jpg);
+background-position: center;
+background-size: cover;
+}
+/*Mobile responsive banane k liye*/
+@media screen and (max-width: 1200px){
+    .current-song-wrapper {
+        position: fixed;
+        left: 0;
+        margin-bottom: 110px;
+        margin-left: 50px;
+        display: flex;
+    }
+    .current-song-image {
+        height: 150px;
+        width: 150px;
+        margin-right: 1rem;
+    }
+
+    .current-song-name {
+        font-size: 1.5rem;
+        margin-top: 2px;
+        margin-bottom: 0;
+    }
+
+    .current-song-album {
+        margin-top: 0.6rem;
+    }
+    .responsive-pane{
+    position: fixed;
+    right: 0;
+    bottom:0;
+    margin-right: 30px;
+    margin-bottom: 110px;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+.responsive-pane i{
+    display: none;
+}
+.responsive-pane input[type=range]{
+    -webkit-appearance: slider-vertical;
+    width:50px;
+    height:120px;
+}
+.main .content{
+    margin:0px auto;
+}
+#mood-list{
+    width: 100%;
+    height:auto;
+    margin:0 auto;
+    margin-top: 60px;
+}
+.mood{
+    opacity:.8;
+    cursor: pointer;
+    width: 350px;
+    height:350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    border:1px solid white;
+}
+.mood span{
+     margin: 0px auto;
+     font-weight: bold;
+     font-size: 2rem;
+}
+}
